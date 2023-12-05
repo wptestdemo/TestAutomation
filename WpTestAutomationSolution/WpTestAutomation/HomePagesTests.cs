@@ -75,7 +75,7 @@ namespace WpTestAutomation
                 test.Log(Status.Info, "Maximize Chrome browser");
                 driver.Navigate().GoToUrl("http://localhost:92/");
                 test.Log(Status.Info, "Navigate to http://localhost:92/");
-
+                Thread.Sleep(2000);
                 driver.FindElement(By.XPath("(//*[@href='https://www.wpsgp.com/company'])[5]")).Click();
                 Thread.Sleep(2000);
                 var pageTitle = driver.Title;
