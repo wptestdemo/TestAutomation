@@ -77,7 +77,7 @@ namespace WpTestAutomation
                 test.Log(Status.Info, "Navigate to http://localhost:92/");
                 Thread.Sleep(2000);
                 driver.FindElement(By.XPath("(//*[@href='https://www.wpsgp.com/company'])[5]")).Click();
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 var pageTitle = driver.Title;
                 Assert.AreEqual("Company | Word Publishing", pageTitle);
                 test.Log(Status.Pass, "Company | Word Publishing page loaded successfully");
