@@ -63,7 +63,7 @@ namespace WpTestAutomation
         }
 
         [TestMethod]
-        public void VerifyUserISAbleToNavigateLearnMorePageSuccessfully()
+        public void VerifyGreatIdeaTitleIsPresent()
         {
             try
             {
@@ -75,12 +75,12 @@ namespace WpTestAutomation
                 test.Log(Status.Info, "Maximize Chrome browser");
                 driver.Navigate().GoToUrl("http://localhost:92/");
                 test.Log(Status.Info, "Navigate to http://localhost:92/");
-                Thread.Sleep(2000);
-                driver.FindElement(By.XPath("(//*[@href='https://www.wpsgp.com/company'])[5]")).Click();
-                Thread.Sleep(3000);
-                var pageTitle = driver.Title;
-                Assert.AreEqual("Company | Word Publishing", pageTitle);
-                test.Log(Status.Pass, "Company | Word Publishing page loaded successfully");
+                Thread.Sleep(1000);
+                var title = driver.FindElement(By.Id("librariesTitle")).Text;
+                Thread.Sleep(1000);
+               // var pageTitle = driver.Title;
+                Assert.AreEqual("Great Idea", title);
+                test.Log(Status.Pass, "Great Idea title is present");
             }
             catch (Exception ex)
             {
