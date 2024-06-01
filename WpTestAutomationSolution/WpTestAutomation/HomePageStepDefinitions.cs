@@ -75,12 +75,12 @@ namespace WpTestAutomation
             }
         }
 
-        [Then(@"Word Publishing - Mumbai header should be display")]
+        [Then(@"Word Publishing - QA Expert header should be display")]
         public void ThenWordPublishing_MumbaiHeaderShouldBeDisplay()
         {
             try { 
                 var header1 = driver.FindElement(By.Id("title")).Text;
-                Assert.AreEqual("Word Publishing - Mumbai", header1);
+                Assert.AreEqual("Word Publishing - QA Expert", header1);
                 test.Log(Status.Pass, "Home page Header verification Pass");
             }
             catch (Exception ex)
